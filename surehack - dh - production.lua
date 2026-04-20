@@ -20,7 +20,7 @@ end
 local is_solara = hookmetamethod == nil or getgenv().Xeno
 
 if not is_solara then
-	loadstring(LPH_ENCSTR([[
+	local _antierr_fn, _antierr_compile = loadstring(LPH_ENCSTR([[
 		for _, func in getconnections(game:GetService("ScriptContext").Error) do
 			if func.Function then
 				hookfunction(func.Function, function() end)
@@ -104,7 +104,15 @@ if not is_solara then
 
 			getgenv().done = true
 		end;
-	]]))()
+	]]))
+	if not _antierr_fn then
+		warn("juju.lol [anti-error compile]: "..tostring(_antierr_compile))
+	else
+		local _antierr_ok, _antierr_run = pcall(_antierr_fn)
+		if not _antierr_ok then
+			warn("juju.lol [anti-error runtime]: "..tostring(_antierr_run))
+		end
+	end
 	task.wait(1)
 end
 
