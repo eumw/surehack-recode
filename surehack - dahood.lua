@@ -105,7 +105,18 @@ if not is_solara then
 			getgenv().done = true
 		end;
 	]]))()
+
+    --[[
+    			if count < 2 then
+				game:GetService("Players")["LocalPlayer"]:Kick("[ surehack ] anticheat has updated, please wait for an update.")
+				return
+			end]]
 	task.wait(1)
+
+	if not getgenv().done then
+		game:GetService("Players")["LocalPlayer"]:Kick("juju > anticheat has updated, please wait for an update.")
+		return
+	end
 end
 
 if is_solara then
@@ -339,9 +350,6 @@ end)()
 if not arg or #arg < 2 then
 	if getgenv().Xeno then
 		arg = "UpdateMousePosI2"
-	else
-		lplr:Kick("juju > if the game updated recently, please wait for an update")
-		return
 	end
 end
 
