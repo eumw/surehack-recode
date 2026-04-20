@@ -119,6 +119,12 @@ local require = not is_solara and require or LPH_NO_VIRTUALIZE(function()local a
 
 LPH_NO_VIRTUALIZE(function()
 	local exec = identifyexecutor()
+	
+	if is_solara then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/quivings/Solara/refs/heads/main/Storage/Drawing.lua"))()
+		getgenv().gethiddenproperty = function() return false end
+		getgenv().setfflag = function() end
+		getgenv().fireclickdetector = function(part) if auto then return end auto = true local cd = part:FindFirstChild("ClickDetector") or part local oldParent = cd.Parent local p = Instance.new("Part") p.Transparency = 1 p.Size = Vector3.new(30,30,30) p.Anchored = true p.CanCollide = false p.Parent = workspace cd.Parent = p cd.MaxActivationDistance = math.huge local conn conn = game["Run Service"].Heartbeat:Connect(function() p.CFrame = workspace.Camera.CFrame *CFrame.new(0,0,-20) * CFrame.new(workspace.Camera.CFrame.LookVector.X,workspace.Camera.CFrame.LookVector.Y,workspace.Camera.CFrame.LookVector.Z) game:GetService("VirtualUser"):ClickButton1(Vector2.new(20,20), workspace:FindFirstChildOfClass("Camera").CFrame) end) cd.MouseClick:Once(function() conn:Disconnect() cd.Parent = oldParent p:Destroy() auto = false end) end
 end)()
 
 --[[
@@ -5049,7 +5055,8 @@ local skins_tab = window:getTab(6)
 					new_skin = loadstring(data)()
 				end)
 
-				if err then
+				if not s or not new_skin then
+					warn("juju.lol [skin "..tostring(file).."]: "..tostring(err))
 					continue end
 				
 				local name = new_skin["Name"]
@@ -5211,9 +5218,17 @@ local configuration = window:getTab(8)
 		
 							wait()
 		
-							local s, err = pcall(function()
-								script_environment[script] = spawn(loadstring(data))
-							end)
+							local fn, compile_err = loadstring(data)
+							if not fn then
+								warn("juju.lol [compile "..tostring(script).."]: "..tostring(compile_err))
+							else
+								script_environment[script] = spawn(function()
+									local ok, run_err = pcall(fn)
+									if not ok then
+										warn("juju.lol [runtime "..tostring(script).."]: "..tostring(run_err))
+									end
+								end)
+							end
 						end
 					end
 					utility.loadConfig(config)
@@ -5297,16 +5312,20 @@ local lua = window:getTab(9)
 
 					wait()
 
-					local s, err = pcall(function()
-						script_environment[script_list.selected_option] = spawn(loadstring(data))
+					local fn, compile_err = loadstring(data)
+					if not fn then
+						error("juju.lol\n	failed to compile \""..script_list.selected_option.."\": "..tostring(compile_err))
+					end
+
+					script_environment[script_list.selected_option] = spawn(function()
+						local ok, run_err = pcall(fn)
+						if not ok then
+							warn("juju.lol [runtime "..tostring(script_list.selected_option).."]: "..tostring(run_err))
+						end
 					end)
 
 					if not find(flags["loaded_scripts"], script_list.selected_option) then
 						insert(flags["loaded_scripts"], script_list.selected_option)
-					end
-					
-					if not s then
-						error(err)
 					end
 				end
 			end
@@ -15249,7 +15268,8 @@ for _, file in listfiles(config_location.."/assets/") do
 		new_skin = loadstring(data)()
 	end)
 
-	if err then
+	if not s or not new_skin then
+		warn("juju.lol [skin "..tostring(file).."]: "..tostring(err))
 		continue end
 	
 	local name = new_skin["Name"]
