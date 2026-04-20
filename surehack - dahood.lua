@@ -105,12 +105,6 @@ if not is_solara then
 			getgenv().done = true
 		end;
 	]]))()
-
-    --[[
-    			if count < 2 then
-				game:GetService("Players")["LocalPlayer"]:Kick("[ surehack ] anticheat has updated, please wait for an update.")
-				return
-			end]]
 	task.wait(1)
 end
 
