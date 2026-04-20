@@ -113,10 +113,10 @@ if not is_solara then
 			end]]
 	task.wait(1)
 
-	if not getgenv().done then
+	--[[if not getgenv().done then
 		game:GetService("Players")["LocalPlayer"]:Kick("juju > anticheat has updated, please wait for an update.")
 		return
-	end
+	end]]
 end
 
 if is_solara then
