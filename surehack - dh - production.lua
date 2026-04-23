@@ -1,4 +1,3 @@
---> dont make key sys pls
 
 repeat task["wait"]() until game:IsLoaded()
 
@@ -16,7 +15,7 @@ if not LPH_OBFUSCATED then
     LPH_JIT = function(...) return ... end
 end
 
-getgenv()["juju"] = {}
+getgenv()["surehack"] = {}
 
 -- > ( bypass )
 
@@ -324,27 +323,27 @@ end
 
 local menu = {
     on_config_loaded = signal["new"](),
-    accent = color3_fromrgb(255, 213, 253),
-    colors = {
-        ["shadow"] = color3_fromrgb(154, 213, 222),
-        ["accent"] = color3_fromrgb(154, 213, 222),
-        ["active_text"] = color3_fromrgb(197, 197, 197),
-        ["keybind_text"] = color3_fromrgb(197, 197, 197),
-        ["border"] = color3_fromrgb(24, 25, 24),
-        ["inactive_text"] = color3_fromrgb(75, 72, 72),
-        ["highlighted"] = color3_fromrgb(51, 65, 70),
-        ["dark_text"] = color3_fromrgb(70, 85, 87),
-        ["image"] = color3_fromrgb(89, 89, 89),
-        ["section"] = color3_fromrgb(6, 6, 6),
-        ["background"] = color3_fromrgb(0, 0, 0),
-        ["success"] = color3_fromrgb(154, 213, 222),
-        ["error"] = color3_fromrgb(39, 60, 96),
-        ["alert"] = color3_fromrgb(30, 51, 61),
-        ["logo"] = color3_fromrgb(154, 213, 222),
-        ["juju"] = color3_fromrgb(154, 213, 222),
-        ["build"] = color3_fromrgb(154, 213, 222),
-        ["cursor"] = color3_fromrgb(154, 213, 222),
-    },
+	accent = color3_fromrgb(254, 230, 254),
+	colors = {
+	    ["shadow"] = color3_fromrgb(254, 230, 254),
+	    ["accent"] = color3_fromrgb(254, 230, 254),
+	    ["active_text"] = color3_fromrgb(240, 240, 240),
+	    ["keybind_text"] = color3_fromrgb(240, 240, 240),
+	    ["border"] = color3_fromrgb(30, 30, 30),
+	    ["inactive_text"] = color3_fromrgb(140, 130, 140),
+	    ["highlighted"] = color3_fromrgb(90, 70, 90),
+	    ["dark_text"] = color3_fromrgb(150, 120, 150),
+	    ["image"] = color3_fromrgb(160, 150, 160),
+	    ["section"] = color3_fromrgb(8, 8, 8),
+	    ["background"] = color3_fromrgb(0, 0, 0),
+	    ["success"] = color3_fromrgb(254, 230, 254),
+	    ["error"] = color3_fromrgb(255, 170, 210),
+	    ["alert"] = color3_fromrgb(120, 80, 120),
+	    ["logo"] = color3_fromrgb(254, 230, 254),
+	    ["surehack"] = color3_fromrgb(254, 230, 254),
+	    ["build"] = color3_fromrgb(254, 230, 254),
+	    ["cursor"] = color3_fromrgb(254, 230, 254),
+	},
     settings = {},
     notifications = {},
     groups = {},
@@ -361,40 +360,41 @@ do
     do
         local files = {
             ["assets"] = {
-                ["api.lua"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/api.lua") end,
-                ["sparkle.ogg"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/sparkle.ogg") end,
-                ["skeet.ogg"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/skeet.ogg") end,
-                ["neverlose.ogg"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/neverlose.ogg") end,
-                ["break.ogg"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/break.ogg") end,
-                ["mc bow.ogg"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/mc%20bow.ogg") end,
-                ["primordial.ogg"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/primordial.ogg") end,
-                ["rust.ogg"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/rust.ogg") end,
-                ["sexy.ogg"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/sexy.ogg") end,
-                ["jaydes.png"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/jaydes.png") end,
-                ["1.png"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/1.png") end,
-                ["2.png"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/2.png") end,
-                ["logo.png"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/logo.png") end,
-                ["saturation.png"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/saturation.png") end,
+                ["api.lua"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/api.lua") end,
+                ["sparkle.ogg"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/sparkle.ogg") end,
+                ["skeet.ogg"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/skeet.ogg") end,
+                ["neverlose.ogg"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/neverlose.ogg") end,
+                ["break.ogg"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/break.ogg") end,
+                ["mc bow.ogg"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/mc%20bow.ogg") end,
+                ["primordial.ogg"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/primordial.ogg") end,
+                ["rust.ogg"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/rust.ogg") end,
+                ["sexy.ogg"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/sexy.ogg") end,
+                ["jaydes.png"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/jaydes.png") end,
+                ["1.png"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/1.png") end,
+                ["2.png"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/2.png") end,
+                ["logo.png"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/logo.png") end,
+                ["saturation.png"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/saturation.png") end,
             },
             ["custom"] = {
-                ["textures.json"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/textures.json") end,
-                ["character.rbxm"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/character.rbxm") end,
-                ["pinksky.rbxm"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/pinksky.rbxm") end,
-                ["scar.ogg"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/scar.ogg") end,
-                ["x hit.rbxm"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/x%20hit.rbxm") end,
-                ["blossom aura.rbxm"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/blossom%20aura.rbxm") end,
-                ["spam.json"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/spam.json") end,
+                ["textures.json"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/textures.json") end,
+                ["character.rbxm"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/character.rbxm") end,
+                ["pinksky.rbxm"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/pinksky.rbxm") end,
+                ["scar.ogg"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/scar.ogg") end,
+                ["x hit.rbxm"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/x%20hit.rbxm") end,
+                ["blossom aura.rbxm"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/blossom%20aura.rbxm") end,
+                ["spam.json"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/spam.json") end,
             },
             ["themes"] = {
-                ["default.th"] = function() return game:HttpGet("https://github.com/hncddrtggqazcrezggs/juju/raw/refs/heads/main/default.th") end,
+                ["default.th"] = function() return game:HttpGet("https://github.com/eumw/surehack-recode/juju/raw/refs/heads/main/default.th") end,
             },
             ["addons"] = {},
             ["configs"] = {},
             ["data.dat"] = [[{"notifications":true,"theme":"","favorites":[]}]]
         }
 
-        if not isfolder("juju recode") then
-            makefolder("juju recode")
+
+        if not isfolder("surehack-recode") then
+            makefolder("surehack-recode")
         end
 
         local recursive_check
@@ -415,7 +415,7 @@ do
             end
         end
 
-        recursive_check("juju recode/", files)
+        recursive_check("surehack-recode/", files)
     end
 
     -- > ( custom drawing )
@@ -723,7 +723,7 @@ do
 
     local logo = drawing_proxy["new"]("Image", {
         ["Color"] = menu["colors"]["accent"],
-        ["Data"] = readfile("juju recode/assets/logo.png"),
+        ["Data"] = readfile("surehack-recode/assets/logo.png"),
         ["Position"] = udim2_new(0, 15, 0, 15),
         ["Parent"] = inside,
         ["Size"] = udim2_new(0, 35, 0, 35),
@@ -734,7 +734,7 @@ do
     local juju_text = drawing_proxy["new"]("Text", {
         ["Font"] = 1,
         ["Color"] = color3_fromrgb(255, 255, 255),
-        ["Text"] = "juju",
+        ["Text"] = "surehack",
         ["Parent"] = logo,
         ["Position"] = udim2_new(1, 5, 0, 3),
         ["Size"] = 14,
@@ -745,7 +745,7 @@ do
     local build_text = drawing_proxy["new"]("Text", {
         ["Font"] = 1,
         ["Color"] = menu["colors"]["accent"],
-        ["Text"] = (LRM_ScriptName == "da hood" or LRM_ScriptName == "da hood copies") and "live" or "private",
+        ["Text"] = (LRM_ScriptName == "da hood" or LRM_ScriptName == "da hood copies") and "club" or "club",
         ["Parent"] = logo,
         ["Position"] = udim2_new(1, 5, 0, 19),
         ["Size"] = 14,
@@ -1170,7 +1170,7 @@ do
 
     function menu:load_theme(theme)
         if theme then
-            local path = "juju recode/themes/"..theme..".th"
+            local path = "surehack-recode/themes/"..theme..".th"
             if isfile(path) then
                 local s, data = pcall(function()
                     return http_service:JSONDecode(readfile(path))
@@ -1679,7 +1679,7 @@ do
 
         if menu["saved"] then
             menu["saved"] = false
-            writefile("juju recode/data.dat", http_service:JSONEncode({
+            writefile("surehack-recode/data.dat", http_service:JSONEncode({
                 ["notifications"] = do_notifications,
                 ["favorites"] = menu["favorites"],
                 ["theme"] = menu["theme"],
@@ -2504,7 +2504,7 @@ do
                     active["favorited"] = true
                     active["parent"]:add_icon(active["drawings"]["text"]["Text"], star)
 
-                    writefile("juju recode/data.dat", http_service:JSONEncode({
+                    writefile("surehack-recode/data.dat", http_service:JSONEncode({
                         ["notifications"] = do_notifications,
                         ["favorites"] = menu["favorites"],
                         ["theme"] = menu["theme"],
@@ -2529,7 +2529,7 @@ do
                     active["parent"]:remove_icon(active["drawings"]["text"]["Text"], star)
                     menu["saved"] = true
 
-                    writefile("juju recode/data.dat", http_service:JSONEncode({
+                    writefile("surehack-recode/data.dat", http_service:JSONEncode({
                         ["notifications"] = do_notifications,
                         ["favorites"] = menu["favorites"],
                         ["theme"] = menu["theme"],
@@ -2632,7 +2632,7 @@ do
 
                     active["parent"]:add_icon(active["drawings"]["text"]["Text"], autoload)
 
-                    writefile("juju recode/data.dat", http_service:JSONEncode({
+                    writefile("surehack-recode/data.dat", http_service:JSONEncode({
                         ["notifications"] = do_notifications,
                         ["favorites"] = menu["favorites"],
                         ["theme"] = menu["theme"],
@@ -2656,7 +2656,7 @@ do
                     menu["saved"] = true
                     active["parent"]:remove_icon(active["drawings"]["text"]["Text"], autoload)
 
-                    writefile("juju recode/data.dat", http_service:JSONEncode({
+                    writefile("surehack-recode/data.dat", http_service:JSONEncode({
                         ["notifications"] = do_notifications,
                         ["favorites"] = menu["favorites"],
                         ["theme"] = menu["theme"],
@@ -2844,7 +2844,7 @@ do
         ["Color"] = color3_fromrgb(255, 0, 0),
         ["Transparency"] = 1,
         ["Rounding"] = 4,
-        ["Data"] = readfile("juju recode/assets/saturation.png"),
+        ["Data"] = readfile("surehack-recode/assets/saturation.png"),
         ["ZIndex"] = 1001,
         ["Visible"] = true,
     })
@@ -5014,7 +5014,7 @@ do
                         new_options[#new_options + 1] = original_options[i]
                     end
 
-                    for _, file in listfiles("juju recode/custom") do
+                    for _, file in listfiles("surehack-recode/custom") do
                         local extension = file:match("%.([^%.]+)$")
 
                         if extension then
@@ -5047,7 +5047,7 @@ do
                             new_options[#new_options + 1] = original_options[i]
                         end
     
-                        for _, file in listfiles("juju recode/custom") do
+                        for _, file in listfiles("surehack-recode/custom") do
                             local extension = file:match("%.([^%.]+)$")
     
                             if extension then
@@ -5879,7 +5879,7 @@ do
                     ["Color"] = colors["background"],
                     ["Transparency"] = 0,
                     ["ZIndex"] = 1101,
-                    ["Visible"] = true,
+                    ["Visible"] = true, 
                 })
                 local image = drawing_proxy["new"]("Image", {
                     ["Parent"] = inside,
@@ -6168,7 +6168,7 @@ do
         menu.get_config_list = function()
             local list = {}
 
-            local files = listfiles("juju recode/configs/")
+            local files = listfiles("surehack-recode/configs/")
             for _, file in files do
                 if string["match"](file, "%.(.*)") == "cfg" then
                     list[#list+1] = string["sub"](file, 21, #file-4)
@@ -6181,7 +6181,7 @@ do
         menu.get_addon_list = function()
             local list = {}
 
-            local files = listfiles("juju recode/addons/")
+            local files = listfiles("surehack-recode/addons/")
             for _, file in files do
                 if string["match"](file, "%.(.*)") == "luau" then
                     list[#list+1] = string["sub"](file, 20, #file-5)
@@ -6194,7 +6194,7 @@ do
         menu.get_skins_list = function()
             local list = {}
 
-            local files = listfiles("juju recode/custom/")
+            local files = listfiles("surehack-recode/custom/")
             for _, file in files do
                 if string["match"](file, "%.(.*)") == "skin" then
                     list[#list+1] = string["sub"](file, 20, #file-5)
@@ -6207,7 +6207,7 @@ do
         menu.get_theme_list = function()
             local list = {}
 
-            local files = listfiles("juju recode/themes/")
+            local files = listfiles("surehack-recode/themes/")
             for _, file in files do
                 if string["match"](file, "%.(.*)") == "th" then
                     list[#list+1] = string["sub"](file, 20, #file-3)
@@ -6265,7 +6265,7 @@ do
                 end
             end
 
-            writefile("juju recode/configs/"..name..".cfg", encrypt(http_service:JSONEncode(config), "^^^^^^^^^^^^^^^^^^^^"))
+            writefile("surehack-recode/configs/"..name..".cfg", encrypt(http_service:JSONEncode(config), "^^^^^^^^^^^^^^^^^^^^"))
         end)
 
         menu["get_config_data"] = LPH_JIT(function(data)
@@ -6287,7 +6287,7 @@ do
                 return
             end
 
-            local path = "juju recode/configs/"..name..".cfg"
+            local path = "surehack-recode/configs/"..name..".cfg"
 
             if isfile(path) then
                 local new_flags = menu["get_config_data"](readfile(path))
@@ -6676,7 +6676,7 @@ do
             end
 
             menu["load_addon"] = function(name)
-                local path = "juju recode/addons/"..name..".luau"
+                local path = "surehack-recode/addons/"..name..".luau"
 
                 if not isfile(path) then
                     return "file does not exist"
@@ -6689,7 +6689,7 @@ do
                 end)
 
                 if not s then
-                    return "juju: addon "..name.." experienced an error while loading: "..err
+                    return "[surehack] [lua] "..name.." experienced an error while loading: "..err
                 end
 
                 if addon_data[name] then
@@ -6716,7 +6716,7 @@ do
 
                 if not s then
                     spawn(menu["unload_addon"], name)
-                    error("juju: addon "..name.." experienced an error while loading: "..err)
+                    error("[surehack] [lua] "..name.." experienced an error while loading: "..err)
                 end
             end
         end
@@ -6841,13 +6841,13 @@ do
             })
 
             create_connection(settings_section:create_element({
-                ["name"] = "unload juju",
+                ["name"] = "unload surehack",
             }, {
                 ["button"] = {
                     ["confirmation"] = true
                 },
             })["on_clicked"], function()
-                getgenv()["_JUJU"]()
+                getgenv()["_surehack"]()
 
                 if (identifyexecutor() == "AWP" or identifyexecutor() == "Nihon") then
                     cleardrawcache()
@@ -6903,13 +6903,13 @@ do
                 ["name"] = "juju color",
             }, {
                 ["colorpicker"] = {
-                    ["default_color"] = menu["colors"]["juju"],
+                    ["default_color"] = menu["colors"]["surehack"],
                     ["default_transparency"] = 0,
                     ["transparency_flag"] = "!juju_transparency",
                     ["color_flag"] = "!juju_color"
                 }
             })["on_color_change"], function(color)
-                menu["colors"]["juju"] = color
+                menu["colors"]["surehack"] = color
                 juju_text["Color"] = color
             end)
 
@@ -7636,7 +7636,7 @@ do
             }, {
                 ["button"] = {}
             })["on_clicked"], function()
-                local file = "juju recode/themes/"..flags["!name"]..".th"
+                local file = "surehack-recode/themes/"..flags["!name"]..".th"
                 local data = {}
 
                 local elements = theme_section["elements"]
@@ -7714,6 +7714,7 @@ do
             local main = menu.create_group("main")
                 main:create_tab("ragebot")
                 main:create_tab("legitbot")
+                main:create_tab("dev features")
 
             local visuals = menu.create_group("visuals")
                 visuals:create_tab("players")
@@ -7723,8 +7724,8 @@ do
            local misc = menu.create_group("misc.")
                 misc:create_tab("players")
                 misc:create_tab("configs")
-                misc:create_tab("addons")
-                misc:create_tab("shop")
+                --misc:create_tab("addons")
+                --misc:create_tab("shop")
                 misc:create_tab("main")
             menu.create_group("addons")
             menu["groups"]["addons"]:hide()
@@ -7830,7 +7831,7 @@ do
 
         create_connection(config_list["on_selection_change"], function(config)
             local config = config or "AbbbbAzbbbbA12z"
-            local path = "juju recode/configs/"..config..".cfg"
+            local path = "surehack-recode/configs/"..config..".cfg"
             local data = nil
             if isfile(path) then
                 data = menu["get_config_data"](readfile(path))
@@ -7937,7 +7938,7 @@ do
 
             if selected_config and tostring(selected_config) and #selected_config > 0 then
                 config_list:remove_item(selected_config)
-                delfile("juju recode/configs/"..selected_config..".cfg")
+                delfile("surehack-recode/configs/"..selected_config..".cfg")
                 menu["new_notification"](
                     "successfully deleted config "..selected_config,
                     1
@@ -7991,7 +7992,7 @@ do
     -- > ( loading / unloading )
 
     do
-        local unload = getgenv()["_JUJU"]
+        local unload = getgenv()["_surehack"]
 
         if unload then
             unload()
@@ -8013,8 +8014,8 @@ do
 
         getrawmetatable = env["getrawmetatable"]
 
-        env["_JUJU"] = function()
-            env["_JUJU"] = nil
+        env["_surehack"] = function()
+            env["_surehack"] = nil
 
             for _, group in menu["groups"] do
                 for _, tab in group["tabs"] do
@@ -8063,7 +8064,7 @@ do
         -- >> ( data )
 
         local s, data = pcall(function()
-            return http_service:JSONDecode(readfile("juju recode/data.dat"))
+            return http_service:JSONDecode(readfile("surehack-recode/data.dat"))
         end)
 
         if s and data then
@@ -8096,7 +8097,7 @@ do
                 menu_references["config_list"]:add_icon(autoload_config, autoload)
             end
         else
-            writefile("juju recode/data.dat", http_service:JSONEncode({
+            writefile("surehack-recode/data.dat", http_service:JSONEncode({
                 ["notifications"] = do_notifications,
                 ["favorites"] = {},
                 ["hide_on_load"] = false,
@@ -9633,7 +9634,7 @@ do
             end)
 
             create_connection(menu_references["trash_talk"]["on_toggle_change"], function(bool)
-                local path = "juju recode/custom/"..flags["trash_talk_list"][1]
+                local path = "surehack-recode/custom/"..flags["trash_talk_list"][1]
                 if isfile(path) then 
                     local s, err = pcall(function()
                         trash_talk_list = http_service:JSONDecode(readfile(path))
@@ -9671,7 +9672,7 @@ do
             end)
 
             create_connection(menu_references["trash_talk_list"]["on_dropdown_change"], function(value)
-                local path = "juju recode/custom/"..flags["trash_talk_list"][1]
+                local path = "surehack-recode/custom/"..flags["trash_talk_list"][1]
                 if isfile(path) then 
                     local s, err = pcall(function()
                         trash_talk_list = http_service:JSONDecode(readfile(path))
@@ -10411,8 +10412,8 @@ do
                 )
             end
             if do_kick then
-                local_player:Kick("[juju anti staff]\n > detected "..player.." roled as "..role)
-                delay(0, getgenv()["_JUJU"])
+                local_player:Kick("[surehack] \n > detected "..player.." roled as "..role)
+                delay(0, getgenv()["_surehack"])
             end
         end
     end
@@ -10678,7 +10679,7 @@ do
                 local crew = find_first_child(information, "Crew")
 
                 if crew and #crew["Value"] ~= 0 then
-                    setclipboard("https://www.roblox.com/communities/"..crew["Value"].."#!/juju")
+                    setclipboard("https://www.roblox.com/communities/"..crew["Value"].."#!/surehack")
 
                     new_notification(
                         "copied "..selected_player["Name"].."'s crew group link to your clipboard",
@@ -10696,7 +10697,7 @@ do
 
     create_connection(player_editor:create_element({["name"] = "copy profile link"}, {["button"] = {}})["on_clicked"], function()
         if selected_player then
-            setclipboard("https://www.roblox.com/users/"..selected_player["UserId"].."/profile#!/juju")
+            setclipboard("https://www.roblox.com/users/"..selected_player["UserId"].."/profile#!/surehack")
             new_notification(
                 "copied "..selected_player["Name"].."'s profile link to your clipboard",
                 1
@@ -11303,7 +11304,8 @@ do
         local sounds = {
             ["windy winter"] = "rbxassetid://6046340391",
             ["light rain"] = "rbxassetid://18862087062",
-            ["thunderstorm"] = "rbxassetid://4305545740",
+            ["thunderstorm"] = "rbxassetid://9112853422",
+            ["raindrop"] = "rbxassetid://122813811029978",
             ["night"] = "rbxassetid://179507208",
             ["day"] = "rbxassetid://6189453706"
         }
@@ -11311,7 +11313,7 @@ do
 
         menu_references["background_noise"] = menu_references["lighting_section"]:create_element({["name"] = "background noise"}, {["toggle"] = {["flag"] = "background_noise"}})
             menu_references["background_noise_settings"] = menu_references["background_noise"]:create_settings()
-            menu_references["background_noise_sound"] = menu_references["background_noise_settings"]:create_element({["name"] = "sound"}, {["dropdown"] = {["flag"] = "background_noise_sound", ["requires_one"] = true, ["options"] = {"windy winter", "thunderstorm", "light rain", "night", "day"}, ["use_custom_extensions"] = {"mp3", "ogg", "wav"}, ["default"] = {"night"}}})
+            menu_references["background_noise_sound"] = menu_references["background_noise_settings"]:create_element({["name"] = "sound"}, {["dropdown"] = {["flag"] = "background_noise_sound", ["requires_one"] = true, ["options"] = {"windy winter", "thunderstorm", "light rain", "night", "day", " raindrop"}, ["use_custom_extensions"] = {"mp3", "ogg", "wav"}, ["default"] = {"raindrop"}}})
             menu_references["background_noise_volume"] = menu_references["background_noise_settings"]:create_element({["name"] = "volume"}, {["slider"] = {["flag"] = "background_noise_volume", ["min"] = 0, ["max"] = 100, ["default"] = 25, ["suffix"] = "%"}})
         
         create_connection(menu_references["background_noise"]["on_toggle_change"], function(value)
@@ -11345,7 +11347,7 @@ do
             local new_sound = sounds[value]
 
             if not new_sound then
-                local path = "juju recode/custom/"..value
+                local path = "surehack-recode/custom/"..value
 
                 if isfile(path) then
                     local s, data = pcall(getcustomasset, path)
@@ -11590,7 +11592,7 @@ do
     end)
 
     local get_textures = LPH_JIT_MAX(function(value)
-        local path = "juju recode/custom/"..value
+        local path = "surehack-recode/custom/"..value
 
         if isfile(path) then
             local s, data = pcall(function()
@@ -11927,7 +11929,7 @@ do
         local value = value[1]
 
         if not skyboxes[value] then
-            local new_skybox = game:GetObjects(getcustomasset("juju recode/custom/"..value))[1]
+            local new_skybox = game:GetObjects(getcustomasset("surehack-recode/custom/"..value))[1]
             skyboxes[value] = new_skybox
         end
 
@@ -12260,7 +12262,7 @@ do
                     ["Transparency"] = 0,
                     ["ZIndex"] = 2,
                     ["Visible"] = true,
-                    ["Text"] = "juju",
+                    ["Text"] = "surehack",
                     ["Size"] = 12,
                     ["Font"] = 2,
                     ["Outline"] = true,
@@ -12272,7 +12274,7 @@ do
                     ["Transparency"] = 0,
                     ["ZIndex"] = 2,
                     ["Visible"] = true,
-                    ["Text"] = (LRM_ScriptName == "da hood" or LRM_ScriptName == "da hood copies") and "live" or "private",
+                    ["Text"] = (LRM_ScriptName == "da hood" or LRM_ScriptName == "da hood copies") and "live" or "win",
                     ["Size"] = 12,
                     ["Font"] = 2,
                     ["Outline"] = true,
@@ -14002,13 +14004,13 @@ do
     local sound_service = cloneref(game:GetService("SoundService"))
 
     local hit_sounds = {
-        ["primordial"] = readfile("juju recode/assets/primordial.ogg"),
-        ["neverlose"] = readfile("juju recode/assets/neverlose.ogg"),
-        ["sparkle"] = readfile("juju recode/assets/sparkle.ogg"),
-        ["mc bow"] = readfile("juju recode/assets/mc bow.ogg"),
-        ["break"] = readfile("juju recode/assets/break.ogg"),
-        ["skeet"] = readfile("juju recode/assets/skeet.ogg"),
-        ["rust"] = readfile("juju recode/assets/rust.ogg"),
+        ["primordial"] = readfile("surehack-recode/assets/primordial.ogg"),
+        ["neverlose"] = readfile("surehack-recode/assets/neverlose.ogg"),
+        ["sparkle"] = readfile("surehack-recode/assets/sparkle.ogg"),
+        ["mc bow"] = readfile("surehack-recode/assets/mc bow.ogg"),
+        ["break"] = readfile("surehack-recode/assets/break.ogg"),
+        ["skeet"] = readfile("surehack-recode/assets/skeet.ogg"),
+        ["rust"] = readfile("surehack-recode/assets/rust.ogg"),
     }
 
     for _, data in hit_sounds do
@@ -14018,7 +14020,7 @@ do
         delfile(path)
     end
 
-    local hit_sound_data = hit_sounds["juju"]
+    local hit_sound_data = hit_sounds["surehack"]
 
     local do_hit_sound = function()
         delay(0, destroy, create_instance("Sound", {
@@ -14047,7 +14049,7 @@ do
 
         if new_value and not hit_sound_data then
             local path = tostring({}):sub(math_random(8, 12))..".ogg"
-            writefile(path, readfile("juju recode/custom/"..new_value))
+            writefile(path, readfile("surehack-recode/custom/"..new_value))
             local asset = getcustomasset(path)
             hit_sounds[new_value] = asset
             delfile(path)
@@ -14212,7 +14214,7 @@ do
             hit_particle = hit_particles[value]
 
             if not hit_particle then
-                local new_particle = game:GetObjects(getcustomasset("juju recode/custom/"..value))[1]
+                local new_particle = game:GetObjects(getcustomasset("surehack-recode/custom/"..value))[1]
                 local children = get_children(new_particle)
                 local new_hit_particle = {}
                 for i = 1, #children do
@@ -14237,7 +14239,7 @@ do
     -- >> ( hit overlay )
 
     local hit_overlay_connection = nil
-    local data = readfile("juju recode/assets/1.png")
+    local data = readfile("surehack-recode/assets/1.png")
 
     local hit_image = nil
     local last_hit = clock()
@@ -15490,7 +15492,7 @@ do
         local skins = menu["get_skins_list"]()
         for _, skin in skins do
             local s, data = pcall(function()
-                return http_service:JSONDecode(readfile("juju recode/custom/"..skin..".skin"))
+                return http_service:JSONDecode(readfile("surehack-recode/custom/"..skin..".skin"))
             end)
 
             if s then
@@ -15653,7 +15655,7 @@ do
     -- >> ( local bullet sound )
 
     local sounds = {
-        ["sexy"] = readfile("juju recode/assets/sexy.ogg")
+        ["sexy"] = readfile("surehack-recode/assets/sexy.ogg")
     }
 
     for _, data in sounds do
@@ -15677,7 +15679,7 @@ do
 
         if not local_bullet_data then
             local path = tostring({}):sub(math_random(8, 12))..".ogg"
-            writefile(path, readfile("juju recode/custom/"..value))
+            writefile(path, readfile("surehack-recode/custom/"..value))
             local_bullet_data = getcustomasset(path)
             sounds[value] = local_bullet_data
             delfile(path)
@@ -15695,7 +15697,7 @@ do
     -- >> ( custom armor pop )
 
     local images = {
-        ["jaydes"] = readfile("juju recode/assets/jaydes.png"),
+        ["jaydes"] = readfile("surehack-recode/assets/jaydes.png"),
     }
 
     for _, data in images do
@@ -15747,7 +15749,7 @@ do
         armor_pop_data = images[value]
 
         if not armor_pop_data then
-            local new_data = getcustomasset("juju recode/custom/"..value)
+            local new_data = getcustomasset("surehack-recode/custom/"..value)
 
             images[value] = new_data
             armor_pop_data = new_data
@@ -17842,7 +17844,7 @@ do
             image_data = selected == "gradient fill" and "iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAYAAABHLFpgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABTSURBVChTdU/LDsAwCGJu1/3/59rUC5HAhaA8bNHdfwF4LrwbagN3wgakwMVc4ttCTLhxmKjOIma5S5VfiC0TE180R8aRIAJvuJfGGHcsoHoZ6gCUSgTCpTUDpwAAAABJRU5ErkJggg==" or selected == "fill" and "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAMSURBVBhXY/j//z8ABf4C/qc1gYQAAAAASUVORK5CYII=" or ""
 
             if image_data == "" then
-                local path = "juju recode/custom/"..selected
+                local path = "surehack-recode/custom/"..selected
 
                 if isfile(path) then
                     image_data = readfile(path)
@@ -18564,7 +18566,7 @@ do
 
     local get_file_description = function(value)
         local value = value or flags["custom_character_file"][1]
-        local file = "juju recode/custom/"..value
+        local file = "surehack-recode/custom/"..value
 
         if isfile(file) then
             return game:GetObjects(getcustomasset(file))[1]
@@ -18968,7 +18970,7 @@ do
             if particle_auras[value] then
                 particle_aura = particle_auras[value]
             else
-                local path = "juju recode/custom/"..value
+                local path = "surehack-recode/custom/"..value
 
                 if isfile(path) then
                     local obj = game:GetObjects(getcustomasset(path))[1]
@@ -19096,7 +19098,7 @@ end
 local backtrack_data = {}
 
 do
-    menu_references["general_section"] = menu["groups"]["main"]:create_section("ragebot", "general", 1, 0.7)
+        menu_references["general_section"] = menu["groups"]["main"]:create_section("ragebot", "general", 1, 0.7)
         menu_references["ragebot_enabled"] = menu_references["general_section"]:create_element({["name"] = "ragebot"}, {["toggle"] = {["flag"] = "ragebot"}})
         menu_references["auto_fire"] = menu_references["general_section"]:create_element({["name"] = "auto fire"}, {["toggle"] = {["flag"] = "auto_fire", ["default"] = false}})
         menu_references["auto_fire_settings"] = menu_references["auto_fire"]:create_settings()
@@ -19104,7 +19106,7 @@ do
         menu_references["auto_fire_at_backtrack"] = menu_references["auto_fire_settings"]:create_element({["name"] = "at backtrack"}, {["toggle"] = {["flag"] = "auto_fire_at_backtrack", ["default"] = false}})
         menu_references["auto_fire_wall_bang"] = menu_references["auto_fire_settings"]:create_element({["name"] = "wall bang"}, {["toggle"] = {["flag"] = "auto_fire_wall_bang", ["default"] = false}})
         menu_references["auto_fire_always_fire"] = menu_references["auto_fire_settings"]:create_element({["name"] = "always fire"}, {["toggle"] = {["flag"] = "auto_fire_always_fire", ["default"] = true}})
-        menu_references["auto_fire_dont_render"] = menu_references["auto_fire_settings"]:create_element({["name"] = "dont render"}, {["toggle"] = {["flag"] = "auto_fire_dont_render", ["default"] = false}})
+        --menu_references["auto_fire_dont_render"] = menu_references["auto_fire_settings"]:create_element({["name"] = "dont render"}, {["toggle"] = {["flag"] = "auto_fire_dont_render", ["default"] = false}})
         menu_references["auto_equip"] = menu_references["general_section"]:create_element({["name"] = "auto equip"}, {["toggle"] = {["flag"] = "auto_equip", ["default"] = false}})
         menu_references["auto_equip_settings"] = menu_references["auto_equip"]:create_settings()
         menu_references["auto_equip_unequip_when"] = menu_references["auto_equip_settings"]:create_element({["name"] = "unequip when"}, {["dropdown"] = {["flag"] = "auto_equip_unequip_when", ["default"] = {"no target"}, ["options"] = {"no target"}, ["multi"] = true}})
@@ -19139,7 +19141,7 @@ do
         menu_references["target_selection_prioritize_by"] = menu_references["target_selection_settings"]:create_element({["name"] = "prioritize by"}, {["dropdown"] = {["flag"] = "prioritize_by", ["options"] = {"closest to character", "closest to mouse", "highest wanted", "lowest health", "random"}, ["default"] = {"closest to mouse"}}})
         menu_references["target_selection_ignore_if"] = menu_references["target_selection_settings"]:create_element({["name"] = "ignore if"}, {["dropdown"] = {["flag"] = "ignore_if", ["options"] = {"invulnerable", "knocked", "in void"}, ["default"] = {"invulnerable"}, ["multi"] = true}})
         menu_references["target_selection_target_distance"] = menu_references["target_selection_settings"]:create_element({["name"] = "target distance"}, {["slider"] = {["flag"] = "target_selection_target_distance", ["default"] = 250, ["max_text"] = "max", ["min"] = 5, ["max"] = 250, ["suffix"] = " studs"}})
-    menu_references["visualization_section"] = menu["groups"]["main"]:create_section("ragebot", "visualization", 1, 0.3, 0.7)
+        menu_references["visualization_section"] = menu["groups"]["main"]:create_section("ragebot", "visualization", 1, 0.3, 0.7)
         --menu_references["information_panel"] = menu_references["visualization_section"]:create_element({["name"] = "information panel"}, {["toggle"] = {["flag"] = "information_panel"}})
         --menu_references["information_panel_settings"] = menu_references["information_panel"]:create_settings()
         menu_references["crosshair_follow"] = menu_references["visualization_section"]:create_element({["name"] = "crosshair follow"}, {["toggle"] = {["flag"] = "crosshair_follow"}})
@@ -19165,7 +19167,7 @@ do
         menu_references["ragebot_tracer_outline_color"] = menu_references["ragebot_tracer_settings"]:create_element({["name"] = "outline"}, {["colorpicker"] = {["color_flag"] = "ragebot_tracer_outline_color", ["default_color"] = color3_fromrgb(15, 15, 15), ["default_transparency"] = 0.05, ["transparency_flag"] = "ragebot_tracer_outline_transparency"}})
         menu_references["ragebot_tracer_origin"] = menu_references["ragebot_tracer_settings"]:create_element({["name"] = "origin"}, {["dropdown"] = {["flag"] = "ragebot_tracer_origin", ["options"] = {"character", "mouse", "gun"}, ["default"] = {"gun"}, ["requires_one"] = true}})
         menu_references["ragebot_tracer_end_point"] = menu_references["ragebot_tracer_settings"]:create_element({["name"] = "end point"}, {["dropdown"] = {["flag"] = "ragebot_tracer_end_point", ["options"] = {"predicted position", "character"}, ["default"] = {"predicted position"}, ["requires_one"] = true}})
-    menu_references["anti_section"] = menu["groups"]["main"]:create_section("ragebot", "anti", 2, 0.3, 0)
+        menu_references["anti_section"] = menu["groups"]["main"]:create_section("ragebot", "anti", 2, 0.3, 0)
         menu_references["sender_rate_value"] = menu_references["anti_section"]:create_element({["name"] = "sender rate value"}, {["toggle"] = {["flag"] = "sender_rate_value"}})
         menu_references["sender_rate_value_settings"] = menu_references["sender_rate_value"]:create_settings()
         menu_references["sender_rate_value_type"] = menu_references["sender_rate_value_settings"]:create_element({["name"] = "value"}, {["dropdown"] = {["flag"] = "sender_rate_value_type", ["options"] = {"automatic", "custom"}, ["default"] = {"automatic"}, ["multi"] = false, ["requires_one"] = true}})
@@ -19205,7 +19207,7 @@ do
         menu_references["void_hide_void_time"] = menu_references["void_hide_settings"]:create_element({["name"] = "void time"}, {["slider"] = {["min"] = 0.01, ["max"] = 2, ["decimals"] = 3, ["default"] = 0.47, ["flag"] = "void_hide_void_time", ["suffix"] = "s"}})
         menu_references["void_hide_teleport_time"] = menu_references["void_hide_settings"]:create_element({["name"] = "teleport time"}, {["slider"] = {["min"] = 0.01, ["max"] = 2, ["decimals"] = 3, ["default"] = 0.1, ["flag"] = "void_hide_teleport_time", ["suffix"] = "s"}})
         menu_references["void_hide_stop_if_forced"]:set_visible(false)
-    menu_references["utility_section"] = menu["groups"]["main"]:create_section("ragebot", "utility", 2, 0.7, 0.3)
+        menu_references["utility_section"] = menu["groups"]["main"]:create_section("ragebot", "utility", 2, 0.7, 0.3)
         menu_references["safe_purchasing"] = menu_references["utility_section"]:create_element({["name"] = "safe purchasing"}, {["toggle"] = {["flag"] = "safe_purchasing"}})
         menu_references["safe_purchasing_settings"] = menu_references["safe_purchasing"]:create_settings()
         menu_references["safe_purchasing_avoid_statuses"] = menu_references["safe_purchasing_settings"]:create_element({["name"] = "avoid statuses"}, {["dropdown"] = {["flag"] = "safe_purchasing_avoid_statuses", ["options"] = {"friendly", "target", "neutral", "enemy"}, ["default"] = {"target", "enemy"}, ["multi"] = true, ["requires_one"] = true}})
@@ -19247,12 +19249,8 @@ do
         menu_references["auto_heal_purchase_if_below"] = menu_references["auto_heal_settings"]:create_element({["name"] = "purchase if below"}, {["slider"] = {["flag"] = "auto_heal_purchase_if_below", ["min"] = 0, ["max"] = 100, ["default"] = 70, ["suffix"] = "%"}})
         menu_references["auto_heal_try_cooldown"] = menu_references["auto_heal_settings"]:create_element({["name"] = "try cooldown"}, {["slider"] = {["flag"] = "auto_heal_try_cooldown", ["min"] = 0, ["max"] = 2, ["default"] = 0.05, ["decimals"] = 2, ["suffix"] = "s"}})
         menu_references["anti_taser"] = menu_references["utility_section"]:create_element({["name"] = "anti taser"}, {["toggle"] = {["flag"] = "anti_taser"}})
+        menu_references["anti_bag"] = menu_references["utility_section"]:create_element({["name"] = "anti bag"}, {["toggle"] = {["flag"] = "anti_bag"}})
         menu_references["rapid_fire"] = menu_references["utility_section"]:create_element({["name"] = "rapid fire"}, {["toggle"] = {["flag"] = "rapid_fire", ["default"] = false}})
-        --[[
-        menu_references["control"] = menu_references["utility_section"]:create_element({["name"] = "control"}, {["toggle"] = {["flag"] = "control", ["default"] = false}})
-        menu_references["control_settings"] = menu_references["control"]:create_settings()
-        menu_references["control_chat_replies"] = menu_references["control_settings"]:create_element({["name"] = "chat replies"}, {["toggle"] = {["flag"] = "control_chat_replies", ["default"] = true}})
-        --]]
     -- >> ( ragebot )
 
     local automatic = false
@@ -19268,7 +19266,7 @@ do
     local ragebot_ignore_if_invulnerable = true
     local ragebot_ignore_if_in_void = false
     local ragebot_ignore_if_knocked = false
-    local resolver_rate = 0.043
+    local resolver_rate = 0.5
 
     local target_last_position = nil
     local target_velocity = nil
@@ -19881,7 +19879,7 @@ do
                                 last_fire = clock()
                                 setthreadidentity(8)
                                 getfenv(shoot)["require"] = require
-                                if not flags["auto_fire_dont_render"] then
+                                --[[if not flags["auto_fire_dont_render"] then
                                     shoot({
                                         Shooter = local_character,
                                         Handle = handle,
@@ -19890,7 +19888,7 @@ do
                                         BeamColor = color3_fromrgb(1, 0.545098, 0.14902),
                                         Range = local_gun[2]
                                     })
-                                end
+                                end]]
 
                                 local dir = (pos-origin)
                                 local Magnitude = dir["Magnitude"]
@@ -21192,6 +21190,909 @@ do
             if value then
                 connection = create_connection(signals["on_player_tool_equipped"], do_anti_taser)
             end
+        end)
+    end
+
+    -- >> ( anti bag )
+
+	do
+		local run_service = cloneref(game:GetService("RunService"))
+		local void_cframe = CFrame.new(0/0, 0/0, 0/0)
+	
+		local function checkAntiBag(dt, hrp_local)
+			if not flags["anti_bag"] then
+				return
+			end
+	
+			local my_char = local_player.Character
+			if not my_char or not my_char:FindFirstChild("HumanoidRootPart") then
+				return
+			end
+	
+			local workspace_players = workspace:FindFirstChild("Players")
+			if not workspace_players then return end
+	
+			local voided = false
+			for _, plr in pairs(players_service:GetPlayers()) do
+				if plr ~= local_player then
+					local char = workspace_players:FindFirstChild(plr.Name) or plr.Character
+					if char and char:FindFirstChild("HumanoidRootPart") then
+						local holding_bag = char:FindFirstChild("[BrownBag]")
+						if holding_bag then
+							local dist = (char.HumanoidRootPart.Position - my_char.HumanoidRootPart.Position).Magnitude
+							if dist <= 25 then
+								local hum = char:FindFirstChildOfClass("Humanoid")
+								if hum then
+									for _, track in pairs(hum:GetPlayingAnimationTracks()) do
+										if track.Animation and tostring(track.Animation.AnimationId):find("3493406987") then
+											voided = true
+											break
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+				if voided then break end
+			end
+	
+			if voided then
+				local hrp = my_char:FindFirstChild("HumanoidRootPart")
+				if hrp then
+					local saved_position = hrp.CFrame
+					hrp.CFrame = void_cframe
+	
+					run_service:BindToRenderStep("RestoreAntiBag", 199, function()
+						if hrp and hrp.Parent then
+							hrp.CFrame = saved_position
+						end
+						run_service:UnbindFromRenderStep("RestoreAntiBag")
+					end)
+				end
+			end
+		end
+	
+		create_connection(menu_references["anti_bag"]["on_toggle_change"], function(value)
+			if value then
+				heartbeat[#heartbeat + 1] = checkAntiBag
+			else
+				for i = 1, #heartbeat do
+					if heartbeat[i] == checkAntiBag then
+						remove(heartbeat, i)
+						break
+					end
+				end
+			end
+		end)
+	end
+
+    -- >> ( double tap )
+
+    do
+        local last_shot = clock()
+        local min_gap = 0.05
+        local do_double_tap = function(_bullet, _beam, _cframe)
+            if not flags["double_tap"] or not flags["ragebot"] or not flags["auto_fire"] then
+                return
+            end
+            if flags["double_tap_require_defensive"] and not (is_defensive_active and is_defensive_active()) then
+                return
+            end
+            if not ragebot_target or ragebot_target[7] or ragebot_target[18] then
+                return
+            end
+
+            local tick = clock()
+            if tick - last_shot < min_gap then
+                return
+            end
+            last_shot = tick
+
+            local target = ragebot_target
+            local parts = target and target[4]
+            local hitbox = parts and parts[flags["ragebot_hitbox"][1] == "head" and "Head" or "UpperTorso"]
+
+            if not hitbox then
+                return
+            end
+
+            local delay_ms = flags["double_tap_delay"] or 25
+            spawn(function()
+                if delay_ms > 0 then
+                    wait(delay_ms/1000)
+                end
+
+                if not flags["double_tap"] or not ragebot_target or ragebot_target ~= target or target[7] or target[18] then
+                    return
+                end
+
+                local parts = target[4]
+                local hit = parts and parts[flags["ragebot_hitbox"][1] == "head" and "Head" or "UpperTorso"]
+
+                if not hit then
+                    return
+                end
+
+                local origin = local_server_position["p"]
+                local pos = ragebot_aim_position or hit["Position"]
+                local dir = (pos-origin)
+                local magnitude = dir["Magnitude"]
+
+                for handle, local_gun in local_guns do
+                    local parent = handle["Parent"]
+                    local ammo = local_gun[3]
+
+                    if parent and ammo and ammo > 0 and (parent["Name"] == "[Rifle]" or parent["Name"] == "[Flintlock]" or (not parts["ForceField"] and not parts["FORCEFIELD"])) then
+                        setthreadidentity(8)
+                        event:FireServer("ShootGun", handle, origin, pos, hit, (magnitude <= 0 or magnitude ~= magnitude) and ((handle["Position"])-pos)["Unit"] or dir)
+                        setthreadidentity(4)
+                        break
+                    end
+                end
+            end)
+        end
+
+        local double_tap_connection = nil
+
+        create_connection(menu_references["double_tap"]["on_toggle_change"], function(value)
+            if double_tap_connection then
+                double_tap_connection:Disconnect()
+                double_tap_connection = nil
+            end
+
+            if value then
+                double_tap_connection = create_connection(signals["on_local_bullet_fired"], do_double_tap)
+            end
+        end)
+    end
+
+    -- >> ( quick stop )
+
+    do
+        local quick_stop_duration = 0.08
+        local quick_stop_zero_y = false
+
+        local do_quick_stop = function()
+            if not flags["quick_stop"] or not flags["ragebot"] then
+                return
+            end
+
+            local hrp = local_parts["HumanoidRootPart"]
+            if not hrp or local_knocked then
+                return
+            end
+
+            local humanoid = local_parts["Humanoid"]
+
+            spawn(function()
+                local old_walk_speed = humanoid and humanoid["WalkSpeed"] or nil
+                local velocity = hrp["Velocity"]
+                local new_velocity = quick_stop_zero_y and vector3_zero or vector3_new(0, velocity["Y"], 0)
+
+                hrp["Velocity"] = new_velocity
+
+                if humanoid then
+                    humanoid["WalkSpeed"] = 0
+                end
+
+                wait(quick_stop_duration)
+
+                if humanoid and old_walk_speed then
+                    humanoid["WalkSpeed"] = old_walk_speed
+                end
+            end)
+        end
+
+        local quick_stop_connection = nil
+
+        create_connection(menu_references["quick_stop"]["on_toggle_change"], function(value)
+            if quick_stop_connection then
+                quick_stop_connection:Disconnect()
+                quick_stop_connection = nil
+            end
+
+            if value then
+                quick_stop_connection = create_connection(signals["on_local_bullet_fired"], do_quick_stop)
+            end
+        end)
+
+        create_connection(menu_references["quick_stop_duration"]["on_slider_change"], function(value)
+            quick_stop_duration = value/1000
+        end)
+
+        create_connection(menu_references["quick_stop_zero_y"]["on_toggle_change"], function(value)
+            quick_stop_zero_y = value
+        end)
+    end
+
+    -- >> ( auto crouch shot )
+
+    do
+        local do_auto_crouch = function()
+            if not flags["auto_crouch_shot"] or not flags["ragebot"] or not ragebot_target or local_knocked then
+                return
+            end
+
+            spawn(function()
+                pcall(function()
+                    event:FireServer("Crouch", true)
+                end)
+                wait(0.25)
+                pcall(function()
+                    event:FireServer("Crouch", false)
+                end)
+            end)
+        end
+
+        local crouch_connection = nil
+
+        create_connection(menu_references["auto_crouch_shot"]["on_toggle_change"], function(value)
+            if crouch_connection then
+                crouch_connection:Disconnect()
+                crouch_connection = nil
+            end
+
+            if value then
+                crouch_connection = create_connection(signals["on_local_bullet_fired"], do_auto_crouch)
+            end
+        end)
+    end
+
+    -- >> ( force face target )
+
+    do
+        local face_smoothing = 0.45
+
+        local do_force_face = LPH_JIT_MAX(function(dt, hrp)
+            if not flags["force_face_target"] or not ragebot_target or not ragebot_aim_position or not hrp then
+                return
+            end
+
+            if ragebot_target[7] or ragebot_target[18] then
+                return
+            end
+
+            local current_cframe = camera["CFrame"]
+            local origin = current_cframe["Position"]
+            local goal = cframe_new(origin, ragebot_aim_position)
+
+            local t = clamp(face_smoothing * dt * 60, 0, 1)
+            camera["CFrame"] = current_cframe:Lerp(goal, t)
+        end)
+
+        create_connection(menu_references["force_face_target"]["on_toggle_change"], function(value)
+            for i = 1, #heartbeat do
+                if heartbeat[i] == do_force_face then
+                    remove(heartbeat, i)
+                    break
+                end
+            end
+
+            if value then
+                heartbeat[#heartbeat+1] = do_force_face
+            end
+        end)
+
+        create_connection(menu_references["force_face_target_smoothing"]["on_slider_change"], function(value)
+            face_smoothing = value/100
+        end)
+    end
+
+    -- >> ( auto prefire )
+
+    do
+        local prefire_duration = 0.8
+        local last_target_lost = 0
+        local last_known_position = nil
+
+        local do_auto_prefire = LPH_JIT_MAX(function(dt, hrp)
+            if not flags["auto_prefire"] or not flags["ragebot"] then
+                last_known_position = nil
+                return
+            end
+
+            if ragebot_target then
+                local parts = ragebot_target[4]
+                local hitbox = parts and parts[flags["ragebot_hitbox"][1] == "head" and "Head" or "UpperTorso"]
+                if hitbox then
+                    last_known_position = hitbox["Position"]
+                    last_target_lost = clock()
+                end
+                return
+            end
+
+            if not last_known_position then
+                return
+            end
+
+            local elapsed = clock() - last_target_lost
+            if elapsed > prefire_duration then
+                last_known_position = nil
+                return
+            end
+
+            custom_ragebot_aim_position = last_known_position
+        end)
+
+        create_connection(menu_references["auto_prefire"]["on_toggle_change"], function(value)
+            for i = 1, #heartbeat do
+                if heartbeat[i] == do_auto_prefire then
+                    remove(heartbeat, i)
+                    break
+                end
+            end
+
+            last_known_position = nil
+
+            if value then
+                heartbeat[#heartbeat+1] = do_auto_prefire
+            end
+        end)
+
+        create_connection(menu_references["auto_prefire_duration"]["on_slider_change"], function(value)
+            prefire_duration = value
+        end)
+    end
+
+    -- >> ( target lock )
+
+    do
+        local locked_target = nil
+        local lock_connection = nil
+
+        local do_enforce_lock = function(new_target)
+            if not flags["target_lock"] then
+                locked_target = nil
+                return
+            end
+
+            if new_target == nil and locked_target and not locked_target[7] then
+                ragebot_target = locked_target
+                return
+            end
+
+            if new_target and not locked_target then
+                locked_target = new_target
+            end
+        end
+
+        create_connection(menu_references["target_lock"]["on_toggle_change"], function(value)
+            if lock_connection then
+                lock_connection:Disconnect()
+                lock_connection = nil
+            end
+
+            locked_target = ragebot_target
+
+            if value then
+                lock_connection = create_connection(signals["on_ragebot_target_changed"], do_enforce_lock)
+            end
+        end)
+
+        create_connection(signals["on_player_died"], function(data)
+            if locked_target == data then
+                locked_target = nil
+            end
+        end)
+    end
+
+    -- >> ( kill say )
+
+    do
+        local chat_event = find_first_child(replicated_storage, "DefaultChatSystemChatEvents")
+        if chat_event then
+            chat_event = find_first_child(chat_event, "SayMessageRequest")
+        end
+
+        local say_on_knock = false
+        local say_on_die = true
+        local include_name = true
+        local last_chat = clock()
+
+        local messages = {
+            "get stomped",
+            "easy",
+            "touched",
+            "done",
+            "sit down",
+            "next",
+            "git gud",
+            "learn to aim",
+        }
+
+        local fire_kill_say = function(target_data, is_knock)
+            if not chat_event or not flags["kill_say"] or not target_data then
+                return
+            end
+
+            if (is_knock and not say_on_knock) or (not is_knock and not say_on_die) then
+                return
+            end
+
+            if target_data ~= ragebot_target then
+                return
+            end
+
+            local tick = clock()
+            if tick - last_chat < 0.35 then
+                return
+            end
+            last_chat = tick
+
+            local msg = messages[math_random(1, #messages)]
+            if include_name and target_data[2] then
+                msg = msg..", "..target_data[2]["Name"]
+            end
+
+            pcall(function()
+                chat_event["FireServer"](chat_event, msg, "All")
+            end)
+        end
+
+        local knock_connection = nil
+        local die_connection = nil
+
+        create_connection(menu_references["kill_say"]["on_toggle_change"], function(value)
+            if knock_connection then
+                knock_connection:Disconnect()
+                knock_connection = nil
+            end
+            if die_connection then
+                die_connection:Disconnect()
+                die_connection = nil
+            end
+
+            if value and chat_event then
+                knock_connection = create_connection(signals["on_player_knocked"], function(data, is_knocked)
+                    if is_knocked then
+                        fire_kill_say(data, true)
+                    end
+                end)
+                die_connection = create_connection(signals["on_player_died"], function(data)
+                    fire_kill_say(data, false)
+                end)
+            end
+        end)
+
+        create_connection(menu_references["kill_say_activate_when"]["on_dropdown_change"], function(value)
+            say_on_knock = false
+            say_on_die = false
+
+            for _, v in value do
+                if v == "target knocked" then
+                    say_on_knock = true
+                elseif v == "target died" then
+                    say_on_die = true
+                end
+            end
+        end)
+
+        create_connection(menu_references["kill_say_include_name"]["on_toggle_change"], function(value)
+            include_name = value
+        end)
+    end
+
+    -- >> ( break grab )
+
+    do
+        local last_break = 0
+        local do_break_grab = LPH_JIT_MAX(function(dt, hrp)
+            if not flags["break_grab"] or not hrp or local_knocked then
+                return
+            end
+
+            local grab = local_parts["GRABBING_CONSTRAINT"]
+            if not grab then
+                return
+            end
+
+            local tick = clock()
+            if tick - last_break < 0.4 then
+                return
+            end
+            last_break = tick
+
+            local old_cframe = hrp["CFrame"]
+            pcall(function()
+                if setnetworkowner then
+                    setnetworkowner(hrp, true)
+                end
+
+                for _ = 1, 3 do
+                    hrp["CFrame"] = cframe_new(vector3_new(math_random(-100000, 100000), math_random(500, 100000), math_random(-100000, 100000)))
+                    hrp["Velocity"] = vector3_new(math_random(-9000, 9000), math_random(-9000, 9000), math_random(-9000, 9000))
+                    render_stepped_wait(render_stepped)
+                end
+
+                hrp["CFrame"] = old_cframe
+                hrp["Velocity"] = vector3_zero
+            end)
+
+            if flags["break_grab_notifications"] then
+                new_notification("broke grab", 1)
+            end
+        end)
+
+        create_connection(menu_references["break_grab"]["on_toggle_change"], function(value)
+            for i = 1, #heartbeat do
+                if heartbeat[i] == do_break_grab then
+                    remove(heartbeat, i)
+                    break
+                end
+            end
+
+            if value then
+                heartbeat[#heartbeat+1] = do_break_grab
+            end
+        end)
+    end
+
+    -- >> ( auto jump )
+
+    do
+        local jump_when_moving = false
+        local jump_when_target = false
+        local jump_when_space = true
+        local space_held = false
+
+        create_connection(user_input_service["InputBegan"], function(input, processed)
+            if processed then
+                return
+            end
+
+            if input["KeyCode"] == Enum.KeyCode.Space then
+                space_held = true
+            end
+        end)
+
+        create_connection(user_input_service["InputEnded"], function(input, processed)
+            if input["KeyCode"] == Enum.KeyCode.Space then
+                space_held = false
+            end
+        end)
+
+        local do_auto_jump = LPH_JIT_MAX(function(dt, hrp)
+            if not flags["auto_jump"] or not hrp or local_knocked then
+                return
+            end
+
+            local humanoid = local_parts["Humanoid"]
+            if not humanoid then
+                return
+            end
+
+            local gate_set = jump_when_space or jump_when_target or jump_when_moving
+            local allowed = not gate_set
+
+            if jump_when_space and space_held then
+                allowed = true
+            end
+            if jump_when_target and ragebot_target then
+                allowed = true
+            end
+            if jump_when_moving and hrp["Velocity"]["Magnitude"] > 2 then
+                allowed = true
+            end
+
+            if allowed and humanoid["FloorMaterial"] ~= Enum.Material.Air then
+                pcall(function()
+                    humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+                end)
+            end
+        end)
+
+        create_connection(menu_references["auto_jump"]["on_toggle_change"], function(value)
+            for i = 1, #heartbeat do
+                if heartbeat[i] == do_auto_jump then
+                    remove(heartbeat, i)
+                    break
+                end
+            end
+
+            if value then
+                heartbeat[#heartbeat+1] = do_auto_jump
+            end
+        end)
+
+        create_connection(menu_references["auto_jump_only_when"]["on_dropdown_change"], function(value)
+            jump_when_moving = false
+            jump_when_target = false
+            jump_when_space = false
+
+            for _, v in value do
+                if v == "moving" then
+                    jump_when_moving = true
+                elseif v == "target active" then
+                    jump_when_target = true
+                elseif v == "space held" then
+                    jump_when_space = true
+                end
+            end
+        end)
+    end
+
+    -- >> ( safe reload )
+
+    do
+        local max_wait = 2
+        local reload_block_connection = nil
+
+        local is_threat_visible = function()
+            local hrp = local_parts["HumanoidRootPart"]
+            if not hrp then
+                return false
+            end
+            local my_pos = hrp["Position"]
+
+            for _, data in player_data do
+                if data[1] == 3 and not data[7] and not data[18] then
+                    local parts = data[4]
+                    local their_hrp = parts and parts["HumanoidRootPart"]
+                    if their_hrp then
+                        local _, on_screen = world_to_viewport_point(camera, their_hrp["Position"])
+                        local distance = (their_hrp["Position"] - my_pos)["Magnitude"]
+                        if on_screen and distance < 200 then
+                            return true
+                        end
+                    end
+                end
+            end
+            return false
+        end
+
+        local hold_reload_until_safe = function()
+            if not flags["safe_reload"] then
+                return
+            end
+
+            local started = clock()
+            while flags["safe_reload"] and is_threat_visible() and (clock() - started) < max_wait do
+                wait(0.05)
+            end
+        end
+
+        create_connection(menu_references["safe_reload"]["on_toggle_change"], function(value)
+            if reload_block_connection then
+                reload_block_connection:Disconnect()
+                reload_block_connection = nil
+            end
+
+            if value then
+                reload_block_connection = create_connection(signals["on_local_reload"], hold_reload_until_safe)
+            end
+        end)
+
+        create_connection(menu_references["safe_reload_max_wait"]["on_slider_change"], function(value)
+            max_wait = value
+        end)
+    end
+
+    -- >> ( auto cash pickup )
+
+    do
+        local pickup_range = 30
+        local disable_when_target = true
+        local disable_when_low_hp = false
+        local last_pickup = clock()
+
+        local do_auto_cash_pickup = LPH_JIT_MAX(function(dt, hrp)
+            if not flags["auto_cash_pickup"] or not hrp or local_knocked then
+                return
+            end
+
+            if disable_when_target and ragebot_target and not ragebot_target[7] then
+                return
+            end
+
+            if disable_when_low_hp then
+                local humanoid = local_parts["Humanoid"]
+                if humanoid and humanoid["Health"]/humanoid["MaxHealth"] < 0.4 then
+                    return
+                end
+            end
+
+            local tick = clock()
+            if tick - last_pickup < 0.15 then
+                return
+            end
+            last_pickup = tick
+
+            local origin = hrp["Position"]
+            local drops_folder = find_first_child(workspace, "Drops") or find_first_child(workspace, "Money") or find_first_child(workspace, "CashDrops")
+            if not drops_folder then
+                return
+            end
+
+            for _, drop in get_children(drops_folder) do
+                local name_lower = drop["Name"]:lower()
+                if name_lower:find("cash") or name_lower:find("money") or name_lower:find("drop") then
+                    local class = drop["ClassName"]
+                    local primary = nil
+
+                    if class == "Model" then
+                        primary = drop["PrimaryPart"] or find_first_child_of_class(drop, "BasePart")
+                    elseif class ~= "Folder" and class ~= "Configuration" then
+                        primary = drop
+                    end
+
+                    if primary then
+                        local ok_pos, pos = pcall(function() return primary["Position"] end)
+                        if ok_pos and pos then
+                            local distance = (pos - origin)["Magnitude"]
+                            if distance <= pickup_range then
+                                local prompt = find_first_child_of_class(primary, "ProximityPrompt") or find_first_child_of_class(drop, "ProximityPrompt")
+                                local detector = find_first_child_of_class(primary, "ClickDetector") or find_first_child_of_class(drop, "ClickDetector")
+
+                                if prompt and fireproximityprompt then
+                                    pcall(fireproximityprompt, prompt)
+                                elseif detector and fireclickdetector then
+                                    pcall(fireclickdetector, detector)
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end)
+
+        create_connection(menu_references["auto_cash_pickup"]["on_toggle_change"], function(value)
+            for i = 1, #heartbeat do
+                if heartbeat[i] == do_auto_cash_pickup then
+                    remove(heartbeat, i)
+                    break
+                end
+            end
+
+            if value then
+                heartbeat[#heartbeat+1] = do_auto_cash_pickup
+            end
+        end)
+
+        create_connection(menu_references["auto_cash_pickup_range"]["on_slider_change"], function(value)
+            pickup_range = value
+        end)
+
+        create_connection(menu_references["auto_cash_pickup_disable_when"]["on_dropdown_change"], function(value)
+            disable_when_target = false
+            disable_when_low_hp = false
+            for _, v in value do
+                if v == "target active" then
+                    disable_when_target = true
+                elseif v == "low health" then
+                    disable_when_low_hp = true
+                end
+            end
+        end)
+    end
+
+    -- >> ( anti fling )
+
+    do
+        local fling_threshold = 400
+
+        local do_anti_fling = LPH_JIT_MAX(function(dt, hrp)
+            if not flags["anti_fling"] or not hrp or local_knocked then
+                return
+            end
+
+            local velocity = hrp["Velocity"]
+            local magnitude = velocity["Magnitude"]
+
+            if magnitude > fling_threshold and magnitude == magnitude then
+                hrp["Velocity"] = vector3_zero
+
+                local rot_velocity = hrp["RotVelocity"]
+                if rot_velocity and rot_velocity["Magnitude"] > 40 then
+                    hrp["RotVelocity"] = vector3_zero
+                end
+            end
+        end)
+
+        create_connection(menu_references["anti_fling"]["on_toggle_change"], function(value)
+            for i = 1, #heartbeat do
+                if heartbeat[i] == do_anti_fling then
+                    remove(heartbeat, i)
+                    break
+                end
+            end
+
+            if value then
+                heartbeat[#heartbeat+1] = do_anti_fling
+            end
+        end)
+
+        create_connection(menu_references["anti_fling_threshold"]["on_slider_change"], function(value)
+            fling_threshold = value
+        end)
+    end
+
+    -- >> ( anti afk )
+
+    do
+        local ok, virtual_user = pcall(function()
+            return cloneref(game:GetService("VirtualUser"))
+        end)
+        local afk_connection = nil
+
+        local do_anti_afk = function()
+            if not flags["anti_afk"] or not ok or not virtual_user then
+                return
+            end
+            pcall(function()
+                virtual_user:CaptureController()
+                virtual_user:ClickButton2(Vector2.new())
+            end)
+        end
+
+        create_connection(menu_references["anti_afk"]["on_toggle_change"], function(value)
+            if afk_connection then
+                afk_connection:Disconnect()
+                afk_connection = nil
+            end
+
+            if value then
+                afk_connection = create_connection(local_player["Idled"], do_anti_afk)
+            end
+        end)
+    end
+
+    -- >> ( panic mode )
+
+    do
+        local panic_flags = {"ragebot", "auto_fire", "spinbot"}
+        local notifications = true
+
+        local flag_map = {
+            ["ragebot"] = "ragebot",
+            ["auto fire"] = "auto_fire",
+            ["velocity desync"] = "velocity_desync",
+            ["follow target"] = "follow_target",
+            ["spinbot"] = "spinbot",
+            ["auto stomp"] = "auto_stomp",
+        }
+
+        local ref_map = {
+            ["ragebot"] = "ragebot_enabled",
+            ["auto_fire"] = "auto_fire",
+            ["velocity_desync"] = "velocity_desync",
+            ["follow_target"] = "follow_target",
+            ["spinbot"] = "spinbot",
+            ["auto_stomp"] = "auto_stomp",
+        }
+
+        local do_panic = function()
+            local disabled_any = false
+            for _, flag in panic_flags do
+                if flags[flag] then
+                    local ref = menu_references[ref_map[flag]]
+                    if ref and ref["set_toggle"] then
+                        pcall(ref.set_toggle, ref, false)
+                        disabled_any = true
+                    end
+                end
+            end
+
+            if notifications and disabled_any then
+                new_notification("panic mode engaged", 2)
+            end
+        end
+
+        create_connection(menu_references["panic_mode"]["on_key_press"], function()
+            do_panic()
+        end)
+
+        create_connection(menu_references["panic_mode_disables"]["on_dropdown_change"], function(value)
+            panic_flags = {}
+            for _, v in value do
+                if flag_map[v] then
+                    panic_flags[#panic_flags+1] = flag_map[v]
+                end
+            end
+        end)
+
+        create_connection(menu_references["panic_mode_notifications"]["on_toggle_change"], function(value)
+            notifications = value
         end)
     end
 
@@ -22567,7 +23468,7 @@ do
     -- > ( control )
 
     --[[do
-        local path = "juju recode/controllers.json"
+        local path = "surehack-recode/controllers.json"
         local current_controllers = {}
         local controller_user_ids = {}
         local connections = {}
@@ -22831,7 +23732,7 @@ do
             end
         }
 
-        getgenv()["juju"]["add_control_command"] = function(name, callback)
+        getgenv()["surehack"]["add_control_command"] = function(name, callback)
             local type1 = type(name)
 
             if type1 ~= "string" then
@@ -22854,7 +23755,7 @@ do
             commands[name] = callback
         end
 
-        getgenv()["juju"]["remove_control_command"] = function(name)
+        getgenv()["surehack"]["remove_control_command"] = function(name)
             local type1 = type(name)
 
             if type1 ~= "string" then
@@ -22981,7 +23882,7 @@ do
         local type = typeof(position)
 
         if type ~= "Vector3" then
-            error("juju: set_silent_aim_position expected Vector3 got"..type)
+            error("[surehack] [ragebot] set_silent_aim_position expected Vector3 got"..type)
             return
         end
 
@@ -23069,7 +23970,6 @@ do
         menu_references["backtrack_length"] = menu_references["backtrack_settings"]:create_element({["name"] = "length"}, {["slider"] = {["flag"] = "backtrack_length", ["min"] = 0.05, ["max"] = 2, ["decimals"] = 2, ["default"] = 0.125, ["suffix"] = "s"}})
         menu_references["backtrack_color"] = menu_references["backtrack_settings"]:create_element({["name"] = "color"}, {["colorpicker"] = {["color_flag"] = "backtrack_color", ["default_color"] = color3_fromrgb(181, 255, 246), ["default_transparency"] = 0.8, ["transparency_flag"] = "backtrack_transparency"}})
         menu_references["backtrack_material"] = menu_references["backtrack_settings"]:create_element({["name"] = "material"}, {["dropdown"] = {["flag"] = "backtrack_material", ["options"] = {"forcefield", "neon"}, ["default"] = {"neon"}, ["requires_one"] = true}})
-
     -- >> ( legitbot master )
 
     local legitbot_ignore_if_invulnerable = true
@@ -23678,7 +24578,7 @@ do
         local type = typeof(position)
 
         if type ~= "Vector3" then
-            error("juju: set_aim_assist_position arg #1 expected Vector3 got "..type)
+            error("[surehack] [legitbot] set_aim_assist_position arg #1 expected Vector3 got "..type)
             return
         end
 
@@ -24075,6 +24975,49 @@ do
         end)
     end
 
+   --[[ menu_references["debug_feature_section"] = menu["groups"]["main"]:create_section("debug", "general", 1, 0.7)
+        menu_references["double_tap"] = menu_references["debug_feature_section"]:create_element({["name"] = "double tap"}, {["toggle"] = {["flag"] = "double_tap", ["default"] = false}})
+        menu_references["double_tap_settings"] = menu_references["debug_feature_section"]:create_settings()
+        menu_references["double_tap_delay"] = menu_references["debug_feature_section"]:create_element({["name"] = "delay"}, {["slider"] = {["flag"] = "double_tap_delay", ["min"] = 0, ["max"] = 200, ["default"] = 25, ["suffix"] = "ms", ["min_text"] = "none"}})
+        menu_references["double_tap_require_defensive"] = menu_references["debug_feature_section"]:create_element({["name"] = "require defensive"}, {["toggle"] = {["flag"] = "double_tap_require_defensive", ["default"] = false}})
+        menu_references["quick_stop"] = menu_references["utility_section"]:create_element({["name"] = "quick stop"}, {["toggle"] = {["flag"] = "quick_stop", ["default"] = false}})
+        menu_references["quick_stop_settings"] = menu_references["quick_stop"]:create_settings()
+        menu_references["quick_stop_duration"] = menu_references["quick_stop_settings"]:create_element({["name"] = "duration"}, {["slider"] = {["flag"] = "quick_stop_duration", ["min"] = 20, ["max"] = 400, ["default"] = 80, ["suffix"] = "ms", ["decimals"] = 0}})
+        menu_references["quick_stop_zero_y"] = menu_references["quick_stop_settings"]:create_element({["name"] = "zero vertical"}, {["toggle"] = {["flag"] = "quick_stop_zero_y", ["default"] = false}})
+        menu_references["auto_crouch_shot"] = menu_references["utility_section"]:create_element({["name"] = "auto crouch shot"}, {["toggle"] = {["flag"] = "auto_crouch_shot", ["default"] = false}})
+        menu_references["force_face_target"] = menu_references["utility_section"]:create_element({["name"] = "force face target"}, {["toggle"] = {["flag"] = "force_face_target", ["default"] = false}})
+        menu_references["force_face_target_settings"] = menu_references["force_face_target"]:create_settings()
+        menu_references["force_face_target_smoothing"] = menu_references["force_face_target_settings"]:create_element({["name"] = "smoothing"}, {["slider"] = {["flag"] = "force_face_target_smoothing", ["min"] = 1, ["max"] = 100, ["default"] = 45, ["suffix"] = "%"}})
+        menu_references["auto_prefire"] = menu_references["utility_section"]:create_element({["name"] = "auto prefire"}, {["toggle"] = {["flag"] = "auto_prefire", ["default"] = false}})
+        menu_references["auto_prefire_settings"] = menu_references["auto_prefire"]:create_settings()
+        menu_references["auto_prefire_duration"] = menu_references["auto_prefire_settings"]:create_element({["name"] = "duration"}, {["slider"] = {["flag"] = "auto_prefire_duration", ["min"] = 0.1, ["max"] = 3, ["default"] = 0.8, ["decimals"] = 2, ["suffix"] = "s"}})
+        menu_references["target_lock"] = menu_references["utility_section"]:create_element({["name"] = "target lock"}, {["toggle"] = {["flag"] = "target_lock", ["default"] = false}})
+        menu_references["kill_say"] = menu_references["utility_section"]:create_element({["name"] = "kill say"}, {["toggle"] = {["flag"] = "kill_say", ["default"] = false}})
+        menu_references["kill_say_settings"] = menu_references["kill_say"]:create_settings()
+        menu_references["kill_say_activate_when"] = menu_references["kill_say_settings"]:create_element({["name"] = "activate when"}, {["dropdown"] = {["flag"] = "kill_say_activate_when", ["options"] = {"target knocked", "target died"}, ["default"] = {"target died"}, ["multi"] = true, ["requires_one"] = true}})
+        menu_references["kill_say_include_name"] = menu_references["kill_say_settings"]:create_element({["name"] = "include name"}, {["toggle"] = {["flag"] = "kill_say_include_name", ["default"] = true}})
+        menu_references["break_grab"] = menu_references["utility_section"]:create_element({["name"] = "break grab"}, {["toggle"] = {["flag"] = "break_grab", ["default"] = false}})
+        menu_references["break_grab_settings"] = menu_references["break_grab"]:create_settings()
+        menu_references["break_grab_notifications"] = menu_references["break_grab_settings"]:create_element({["name"] = "notifications"}, {["toggle"] = {["flag"] = "break_grab_notifications", ["default"] = false}})
+        menu_references["auto_jump"] = menu_references["utility_section"]:create_element({["name"] = "auto jump"}, {["toggle"] = {["flag"] = "auto_jump", ["default"] = false}})
+        menu_references["auto_jump_settings"] = menu_references["auto_jump"]:create_settings()
+        menu_references["auto_jump_only_when"] = menu_references["auto_jump_settings"]:create_element({["name"] = "only when"}, {["dropdown"] = {["flag"] = "auto_jump_only_when", ["options"] = {"moving", "target active", "space held"}, ["default"] = {"space held"}, ["multi"] = true, ["requires_one"] = false}})
+        menu_references["safe_reload"] = menu_references["utility_section"]:create_element({["name"] = "safe reload"}, {["toggle"] = {["flag"] = "safe_reload", ["default"] = false}})
+        menu_references["safe_reload_settings"] = menu_references["safe_reload"]:create_settings()
+        menu_references["safe_reload_max_wait"] = menu_references["safe_reload_settings"]:create_element({["name"] = "max wait"}, {["slider"] = {["flag"] = "safe_reload_max_wait", ["min"] = 0.5, ["max"] = 5, ["default"] = 2, ["decimals"] = 2, ["suffix"] = "s"}})
+        menu_references["auto_cash_pickup"] = menu_references["utility_section"]:create_element({["name"] = "auto cash pickup"}, {["toggle"] = {["flag"] = "auto_cash_pickup", ["default"] = false}})
+        menu_references["auto_cash_pickup_settings"] = menu_references["auto_cash_pickup"]:create_settings()
+        menu_references["auto_cash_pickup_range"] = menu_references["auto_cash_pickup_settings"]:create_element({["name"] = "range"}, {["slider"] = {["flag"] = "auto_cash_pickup_range", ["min"] = 5, ["max"] = 100, ["default"] = 30, ["suffix"] = " studs"}})
+        menu_references["auto_cash_pickup_disable_when"] = menu_references["auto_cash_pickup_settings"]:create_element({["name"] = "disable when"}, {["dropdown"] = {["flag"] = "auto_cash_pickup_disable_when", ["options"] = {"target active", "low health"}, ["default"] = {"target active"}, ["multi"] = true, ["requires_one"] = false}})
+        menu_references["anti_fling"] = menu_references["utility_section"]:create_element({["name"] = "anti fling"}, {["toggle"] = {["flag"] = "anti_fling", ["default"] = false}})
+        menu_references["anti_fling_settings"] = menu_references["anti_fling"]:create_settings()
+        menu_references["anti_fling_threshold"] = menu_references["anti_fling_settings"]:create_element({["name"] = "threshold"}, {["slider"] = {["flag"] = "anti_fling_threshold", ["min"] = 100, ["max"] = 2000, ["default"] = 400, ["suffix"] = " studs/s"}})
+        menu_references["anti_afk"] = menu_references["utility_section"]:create_element({["name"] = "anti afk"}, {["toggle"] = {["flag"] = "anti_afk", ["default"] = false}})
+        menu_references["panic_mode"] = menu_references["utility_section"]:create_element({["name"] = "panic mode"}, {["keybind"] = {["flag"] = "panic_mode", ["default"] = Enum["KeyCode"]["Unknown"]}})
+        menu_references["panic_mode_settings"] = menu_references["panic_mode"]:create_settings()
+        menu_references["panic_mode_disables"] = menu_references["panic_mode_settings"]:create_element({["name"] = "disables"}, {["dropdown"] = {["flag"] = "panic_mode_disables", ["options"] = {"ragebot", "auto fire", "velocity desync", "follow target", "spinbot", "auto stomp"}, ["default"] = {"ragebot", "auto fire", "spinbot"}, ["multi"] = true, ["requires_one"] = true}})
+        menu_references["panic_mode_notifications"] = menu_references["panic_mode_settings"]:create_element({["name"] = "notifications"}, {["toggle"] = {["flag"] = "panic_mode_notifications", ["default"] = true}})
+]]
     -- >> ( reduce shotgun spread )
 
     do
@@ -24156,16 +25099,16 @@ do
         local backtrack_transparency = flags["backtrack_transparency"]
         backtrack_data = {}
 
-        getgenv()["juju"]["get_backtrack_position"] = LPH_JIT_MAX(function(player)
+        getgenv()["surehack"]["get_backtrack_position"] = LPH_JIT_MAX(function(player)
             local type = typeof(player)
 
             if type ~= "Instance" then
-                error("juju: get_backtrack_position arg #1 expected Instance got "..type)
+                error("[surehack] [legitbot] get_backtrack_position arg #1 expected Instance got "..type)
                 return
             end
 
             if player["ClassName"] ~= "Player" then
-                error("juju: get_backtrack_position arg #1 expected Player got "..player["ClassName"])
+                error("[surehack] [legitbot] get_backtrack_position arg #1 expected Player got "..player["ClassName"])
                 return
             end
 
@@ -24659,7 +25602,7 @@ do
 
         create_connection(addon_list["on_selection_change"], function(addon)
             local addon = addon or ""
-            local path = "juju recode/addons/"..addon..".luau"
+            local path = "surehack-recode/addons/"..addon..".luau"
 
             if addon ~= "" and isfile(path) then
                 if addon_data[addon] then
@@ -24734,20 +25677,20 @@ do
 
     local typeof = typeof
     local g = menu["get_active_binds"]
-    local old = getgenv()["juju"]
+    local old = getgenv()["surehack"]
     local new = {
         create_connection = function(signal, callback)
             local type = typeof(signal)
 
             if type ~= "RBXScriptSignal" and type ~= "table" then
-                error("juju: create_connection arg #1 expected RBXScriptSignal or table got "..type)
+                error("[surehack] [lua] create_connection arg #1 expected RBXScriptSignal or table got "..type)
                 return
             end
 
             local type = typeof(callback)
 
             if type ~= "function" then
-                error("juju: create_connection arg #2 expected function got "..type)
+                error("[surehack] [lua] create_connection arg #2 expected function got "..type)
                 return
             end
 
@@ -24772,21 +25715,21 @@ do
             local type = typeof(name)
 
             if type ~= "string" then
-                error("juju: find_element arg #1 expected string got "..type)
+                error("[surehack] [lua] find_element arg #1 expected string got "..type)
                 return
             end
 
             local type = typeof(parent)
 
             if type ~= "string" then
-                error("juju: find_element arg #2 expected string got "..type)
+                error("[surehack] [lua] find_element arg #2 expected string got "..type)
                 return
             end
 
             local name = name:lower()
 
             if name:find("config") or name:find("unload") then
-                error("juju: find_element arg #2 expected string got <?>")
+                error("[surehack] [lua] find_element arg #2 expected string got <?>")
                 return
             end
 
@@ -24820,43 +25763,43 @@ do
                 end
             end
 
-            error("juju: find_element failed to find element "..name)
+            error("[surehack] [lua] find_element failed to find element "..name)
         end),
         create_section = function(name, side, size, offset)
             local type = typeof(name)
 
             if type ~= "string" then
-                error("juju: create_section arg #1 expected string got "..type)
+                error("[surehack] [lua] create_section arg #1 expected string got "..type)
                 return
             end
 
             local type = typeof(side)
 
             if type ~= "number" then
-                error("juju: create_section arg #2 expected number got "..type)
+                error("[surehack] [lua] create_section arg #2 expected number got "..type)
                 return
             elseif side ~= 1 and side ~= 2 then
-                error("juju: create_section arg #2 expected number 1 or 2 got "..side)
+                error("[surehack] [lua] create_section arg #2 expected number 1 or 2 got "..side)
                 return
             end
 
             local type = typeof(size)
 
             if type ~= "number" then
-                error("juju: create_section arg #3 expected number got "..type)
+                error("[surehack] [lua] create_section arg #3 expected number got "..type)
                 return
             elseif size < 0 or size > 1 then
-                error("juju: create_section arg #3 expected number between 0 and 1 got "..size)
+                error("[surehack] [lua] create_section arg #3 expected number between 0 and 1 got "..size)
                 return
             end
 
             local type = typeof(offset)
 
             if type ~= "number" then
-                error("juju: create_section arg #4 expected number got "..type)
+                error("[surehack] [lua] create_section arg #4 expected number got "..type)
                 return
             elseif offset < 0 or offset > 0.9 then
-                error("juju: create_section arg #4 expected number between 0 and 0.9 got "..offset)
+                error("[surehack] [lua] create_section arg #4 expected number between 0 and 0.9 got "..offset)
                 return
             end
 
@@ -24899,21 +25842,21 @@ do
                         end
                     end
                 end
-                error("juju: create_element arg #1 expected string got "..type)
+                error("[surehack] [lua] create_element arg #1 expected string got "..type)
                 return
             end
 
             local type = typeof(info)
 
             if type ~= "table" then
-                error("juju: create_element arg #2 expected table got "..type)
+                error("[surehack] [lua] create_element arg #2 expected table got "..type)
                 return
             end
 
             local type = typeof(elements)
 
             if type ~= "table" then
-                error("juju: create_element arg #3 expected table got "..type)
+                error("[surehack] [lua] create_element arg #3 expected table got "..type)
                 return
             end
 
@@ -24926,14 +25869,14 @@ do
                     local tab = data[2]
 
                     if not tab or not tab["destroy"] then
-                        error("juju: create_element failed due to missing tab")
+                        error("[surehack] [lua] create_element failed due to missing tab")
                         return 
                     end
 
                     local section = tab["sections"][section]
 
                     if not section or not section["destroy"] then
-                        error("juju: create_element failed due to missing section \'"..section.."\''")
+                        error("[surehack] [lua] create_element failed due to missing section \'"..section.."\''")
                         return 
                     end
 
@@ -24945,7 +25888,7 @@ do
             local type = typeof(signal)
 
             if type ~= "string" then
-                error("juju: get_signal arg #1 expected string got "..type)
+                error("[surehack] [lua] get_signal arg #1 expected string got "..type)
                 return
             end
 
@@ -24972,14 +25915,14 @@ do
         end),
         set_flag = LPH_JIT_MAX(function(flag, value)
             if flag == nil or flag == "author" or flag == "date" or flag == "loaded_addons" then
-                error("juju: set_flag arg #1 expected string got <?>")
+                error("[surehack] [lua] set_flag arg #1 expected string got <?>")
                 return
             end
 
             local type = type(flag)
 
             if type ~= "string" then
-                error("juju: set_flag arg #1 expected string got "..type)
+                error("[surehack] [lua] set_flag arg #1 expected string got "..type)
                 return
             end
 
@@ -25006,14 +25949,14 @@ do
             local type = typeof(player)
 
             if type ~= "Instance" then
-                error("juju: add_ragebot_target arg #1 expected Instance got "..type)
+                error("[surehack] [ragebot] add_ragebot_target arg #1 expected Instance got "..type)
                 return
             end
 
             local data = player_data[player]
 
             if not data then
-                error("juju: add_ragebot_target errored due to missing player data")
+                error("[surehack] [ragebot] add_ragebot_target errored due to missing player data")
                 return
             end
 
@@ -25023,14 +25966,14 @@ do
             local type = typeof(player)
 
             if type ~= "Instance" then
-                error("juju: remove_ragebot_target arg #1 expected Instance got "..type)
+                error("[surehack] [ragebot] remove_ragebot_target arg #1 expected Instance got "..type)
                 return
             end
 
             local data = player_data[player]
 
             if not data then
-                error("juju: remove_ragebot_target errored due to missing player data")
+                error("[surehack] [ragebot] remove_ragebot_target errored due to missing player data")
                 return
             end
 
@@ -25051,14 +25994,14 @@ do
             local type = type(string)
 
             if type ~= "string" then
-                error("juju: load_config arg #1 expected string got "..type)
+                error("[surehack] [config] load_config arg #1 expected string got "..type)
                 return
             end
 
-            if isfile("juju recode/configs/"..string..".cfg") then
+            if isfile("surehack-recode/configs/"..string..".cfg") then
                 menu["load_config"](string)
             else
-                error("juju: load_config expected string got "..type)
+                error("[surehack] [config] load_config expected string got "..type)
             end
         end),
         set_tab_text = function(text)
@@ -25074,7 +26017,7 @@ do
                         local type = type(text)
 
                         if type ~= "string" then
-                            error("juju: set_tab_text arg #1 expected string got "..type)
+                            error("[surehack] [config] set_tab_text arg #1 expected string got "..type)
                             return
                         end
 
@@ -25138,14 +26081,14 @@ do
             local type = typeof(player)
 
             if player ~= nil and ((type ~= "Instance") or (player and player["ClassName"] ~= "Player" or player == local_player)) then
-                error("juju: set_ragebot_target arg #1 expected Player got "..type)
+                error("[surehack] [ragebot] set_ragebot_target arg #1 expected Player got "..type)
                 return
             end
 
             local type = typeof(message)
 
             if type ~= "string" and message ~= nil then
-                error("juju: set_ragebot_target arg #2 expected string or nil got "..type)
+                error("[surehack] [ragebot] set_ragebot_target arg #2 expected string or nil got "..type)
                 return
             end
 
@@ -25159,7 +26102,7 @@ do
             local type = typeof(player)
 
             if type ~= "Instance" or player["ClassName"] ~= "Player" or player == local_player then
-                error("juju: get_player_status arg #1 expected Player got "..type)
+                error("[surehack] [player] get_player_status arg #1 expected Player got "..type)
                 return
             end
 
@@ -25173,14 +26116,14 @@ do
             local type = typeof(player)
 
             if type ~= "Instance" or player["ClassName"] ~= "Player" or player == local_player then
-                error("juju: set_player_status arg #1 expected Player got "..type)
+                error("[surehack] [player] set_player_status arg #1 expected Player got "..type)
                 return
             end
 
             local type = typeof(status)
 
             if type ~= "number" then
-                error("juju: set_player_status arg #1 expected number 1-3 got "..type)
+                error("[surehack] [player] set_player_status arg #1 expected number 1-3 got "..type)
                 return
             end
 
@@ -25201,7 +26144,7 @@ do
             local type = typeof(cf)
 
             if type ~= "CFrame" then
-                error("juju: set_server_cframe arg #1 expected CFrame got "..type)
+                error("[surehack] [server] set_server_cframe arg #1 expected CFrame got "..type)
                 return
             end
 
@@ -25237,7 +26180,7 @@ do
             local type = typeof(player)
 
             if type ~= "Instance" or player["ClassName"] ~= "Player" then
-                error("juju: is_player_knocked arg #1 expected Instance (Player) got "..type)
+                error("[surehack] [player] is_player_knocked arg #1 expected Instance (Player) got "..type)
                 return
             end
 
@@ -25249,7 +26192,7 @@ do
             local type = typeof(player)
 
             if type ~= "Instance" or player["ClassName"] ~= "Player" then
-                error("juju: is_player_invulnerable arg #1 expected Instance (Player) got "..type)
+                error("[surehack] [player] is_player_invulnerable arg #1 expected Instance (Player) got "..type)
                 return
             end
 
@@ -25264,7 +26207,7 @@ do
             local type = typeof(player)
 
             if type ~= "Instance" or player["ClassName"] ~= "Player" then
-                error("juju: is_player_dead arg #1 expected Instance (Player) got "..type)
+                error("[surehack] [player] is_player_dead arg #1 expected Instance (Player) got "..type)
                 return
             end
 
@@ -25304,14 +26247,14 @@ do
             local type = typeof(player)
 
             if player ~= nil and ((type ~= "Instance") or (player and player["ClassName"] ~= "Player" or player == local_player)) then
-                error("juju: set_legitbot_target arg #1 expected Player got "..type)
+                error("[surehack] [legitbot] set_legitbot_target arg #1 expected Player got "..type)
                 return
             end
 
             local type = typeof(message)
 
             if type ~= "string" and message ~= nil then
-                error("juju: set_legitbot_target arg #2 expected string or nil got "..type)
+                error("[surehack] [legitbot] set_legitbot_target arg #2 expected string or nil got "..type)
                 return
             end
 
@@ -25352,21 +26295,21 @@ do
             local type2 = typeof(text)
 
             if type2 ~= "string" then
-                error("juju: create_notification arg #1 expected string got "..type2)
+                error("[surehack] [lua] create_notification arg #1 expected string got "..type2)
                 return
             end
 
             local type2 = typeof(type)
 
             if type2 ~= "number" then
-                error("juju: create_notification arg #2 expected number got "..type2)
+                error("[surehack] [lua] create_notification arg #2 expected number got "..type2)
                 return
             end
 
             local type2 = typeof(time)
 
             if type2 ~= "number" and time ~= nil then
-                error("juju: create_notification arg #3 expected number got "..type2)
+                error("[surehack] [lua] create_notification arg #3 expected number got "..type2)
                 return
             end
 
@@ -25376,7 +26319,7 @@ do
     for name, func in old do
         new[name] = func
     end
-    getgenv()["juju"] = new
+    getgenv()["surehack"] = new
 end
 
 -- > ( finish loading )
@@ -25385,7 +26328,7 @@ do
     local username = "?"
     local avatar = nil
 
-    local LRM_LinkedDiscordID = LRM_LinkedDiscordID or "320421345324433418"
+    local LRM_LinkedDiscordID = LRM_LinkedDiscordID or "1111118392171184149"
     if LRM_LinkedDiscordID then
         local s, data = pcall(function()
             local body = request({
@@ -25421,15 +26364,20 @@ do
     end
 
     new_notification(
-        "welcome back to juju, "..username,
-        5,
-        color3_fromrgb(255, 255, 255),
-        avatar or base64_decode("iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMvu8A7YAAAC2ZVhJZklJKgAIAAAABQAaAQUAAQAAAEoAAAAbAQUAAQAAAFIAAAAoAQMAAQAAAAIAAAAxAQIAEAAAAFoAAABphwQAAQAAAGoAAAAAAAAADHcBAOgDAAAMdwEA6AMAAFBhaW50Lk5FVCA1LjEuMgADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlAAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAADu6i0YxswAAgAAAGBJREFUOE+tkdEOgCAIRdH//+eCO3BG16TWeUEYB5zK7xyKHynNI9g1G01BRJZYDOjqjPpN3G2lG2cpGqIWOWUW89nwFHSPIG95DRNLwypNl6sapcmMqjiemAmPX/ANkROaKkTiEnqHHQAAAABJRU5ErkJggg==")
+        "welcome back to surehack.club "..username,
+        5
+        --color3_fromrgb(255, 255, 255),
+        --avatar or base64_decode("iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMvu8A7YAAAC2ZVhJZklJKgAIAAAABQAaAQUAAQAAAEoAAAAbAQUAAQAAAFIAAAAoAQMAAQAAAAIAAAAxAQIAEAAAAFoAAABphwQAAQAAAGoAAAAAAAAADHcBAOgDAAAMdwEA6AMAAFBhaW50Lk5FVCA1LjEuMgADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlAAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAADu6i0YxswAAgAAAGBJREFUOE+tkdEOgCAIRdH//+eCO3BG16TWeUEYB5zK7xyKHynNI9g1G01BRJZYDOjqjPpN3G2lG2cpGqIWOWUW89nwFHSPIG95DRNLwypNl6sapcmMqjiemAmPX/ANkROaKkTiEnqHHQAAAABJRU5ErkJggg==")
     )
 
     new_notification(
-        "please only use alternate accounts! read announcements for more info",
-        1
+        "!!!ONLY USE ON ALTERNATE ACCOUNTS!!!",
+        5
+    )
+
+    new_notification(
+        "Currently, surehack does NOT have an aim accuracy bypass. use at own risk.",
+        5
     )
 
     local overlay = core_gui["RobloxPromptGui"]["promptOverlay"]
@@ -25449,8 +26397,8 @@ do
                     local background = flags["custom_kick_screen_background"]
                     local create_fake_drawing = getgenv()["_PROXY"]["new"]
                     local color = flags["custom_kick_screen_color"]
-                    local path = "juju recode/"..(background == "2.png" and "assets/2.png" or "custom/"..background)
-                    local data = isfile(path) and readfile(path) or readfile("juju recode/assets/2.png")
+                    local path = "surehack-recode/"..(background == "2.png" and "assets/2.png" or "custom/"..background)
+                    local data = isfile(path) and readfile(path) or readfile("surehack-recode/assets/2.png")
                     local message_label = error["MessageArea"]["ErrorFrame"]["ErrorMessage"]
                     local message = error["MessageArea"]["ErrorFrame"]["ErrorMessage"]
                     error["Visible"] = false
@@ -25489,7 +26437,7 @@ do
                         ["Color"] = color3_fromrgb(255, 255, 255),
                         ["Size"] = udim2_new(0, 100, 0, 100),
                         ["Position"] = udim2_new(0.5, -50, 0.45, -50),
-                        ["Data"] = readfile("juju recode/assets/logo.png"),
+                        ["Data"] = readfile("surehack-recode/assets/logo.png"),
                         ["Transparency"] = 0,
                         ["Parent"] = background,
                         ["Visible"] = true,
@@ -25634,7 +26582,10 @@ do
                                     connection:Disconnect()
                                     tween(last_tweened, {["Transparency"] = 0.8}, circular, out, 0.2)
 
-                                    text["Text"] = "finding server..."
+                                    new_notification(
+                                        "finding server...",
+                                        1
+                                    )
                                     local servers = http_service:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game["PlaceId"].."/servers/Public?sortOrder=Asc&limit=100"))["data"]
                                     local lowest_ping = 9e9
                                     local most_players = 0
@@ -25668,7 +26619,7 @@ do
     end))
 
     local autoload = menu["autoload"]
-    if autoload and isfile("juju recode/configs/"..autoload..".cfg") then
+    if autoload and isfile("surehack-recode/configs/"..autoload..".cfg") then
         spawn(menu["load_config"], autoload)
         menu["new_notification"]("autoloaded config "..autoload, 1)
     end
